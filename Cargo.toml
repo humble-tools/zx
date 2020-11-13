@@ -1,0 +1,24 @@
+[package]
+name = "zx"
+version = "0.1.0"
+authors = ["Poga Po <poga.po@gmail.com>"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+chrono = "0.4"
+anyhow = "1.0"
+maplit = "1.0"
+itertools = "0.9"
+redis = "*"
+lazy_static = "*"
+
+sqlparser = { version = "0.6.1", features = ["serde"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = { version = "1.0" }
+
+[dependencies.redis-module]
+version = "0.10.0"
+features = ["experimental-api"]

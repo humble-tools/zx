@@ -1,0 +1,73 @@
+FLUSHALL
+
+:: init
+SET LAST-ID 0
+SET ID-OFFSET 0
+
+:: row id = 1
+INCR LAST-ID
+ZADD TS 0 1
+ZADD COL-foo 1 1;;;100
+ZADD COL-x 1 1;;;7
+ZADD COL-y 1 1;;;1
+ZADD COL-tag 1 1;;;t1
+
+:: row id = 2
+INCR LAST-ID
+ZADD TS 1 2
+ZADD COL-foo 2 2;;;200
+ZADD COL-x 2 2;;;1
+ZADD COL-tag 2 2;;;t1,t2
+
+:: row id = 3
+INCR LAST-ID
+ZADD TS 2 3
+ZADD COL-foo 3 3;;;300
+ZADD COL-x 3 3;;;3
+ZADD COL-tag 3 3;;;t3
+
+:: row id = 4
+INCR LAST-ID
+ZADD TS 3 4
+ZADD COL-foo 4 4;;;400
+ZADD COL-x 4 4;;;2
+ZADD COL-y 4 4;;;9
+ZADD COL-tag 4 4;;;t2
+
+:: row id = 5
+INCR LAST-ID
+ZADD TS 4 5
+ZADD COL-foo 5 5;;;500
+ZADD COL-x 5 5;;;4
+
+:: row id = 6
+INCR LAST-ID
+ZADD TS 5 6
+ZADD COL-foo 6 6;;;600
+ZADD COL-x 6 6;;;5
+ZADD COL-tag 6 6;;;t3
+
+:: row id = 7
+INCR LAST-ID
+ZADD TS 6 7
+ZADD COL-foo 7 7;;;700
+ZADD COL-x 7 7;;;6
+
+:: row id = 8
+INCR LAST-ID
+ZADD TS 7 8
+ZADD COL-foo 8 8;;;800
+ZADD COL-x 8 8;;;9
+
+:: row id = 9
+INCR LAST-ID
+ZADD TS 8 9
+ZADD COL-foo 9 9;;;900
+ZADD COL-x 9 9;;;8
+
+:: row id = 10
+INCR LAST-ID
+ZADD TS 9 10
+ZADD COL-foo 10 10;;;1000
+ZADD COL-x 10 10;;;0
+ZADD COL-y 10 10;;;9
