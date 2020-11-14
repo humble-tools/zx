@@ -3,7 +3,7 @@
 Column-based serverless database for observability.
 
 - Separated storage and computing layers. Designed for serverless, cloud-native environment.
-- Minimal maintainance required.
+- Minimal maintenance required.
 - Scale from local debugging to observing distributed systems.
 
 ## Usage
