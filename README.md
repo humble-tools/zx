@@ -31,3 +31,24 @@ $ cargo build
 ```
 redis-server --loadmodule ./target/debug/libxz.dylib
 ```
+
+### Running tests
+
+A simple dataset is provided in the `fixture/` directory. To load it:
+
+```
+$ redis-server --loadmodule <LIBXZ_PATH_RELATIVE_TO_DIR> --dir <FIXTURE_DIR> --dbfilename TS.rdb
+```
+
+For example, assuming you're in the project root:
+
+```
+$ redis-server --loadmodule ../target/debug/libzx.so --dir ./fixtures/ --dbfilename TS.rdb
+```
+
+In another console:
+
+```
+$ redis-cli ZX.T
+"ok"
+```
