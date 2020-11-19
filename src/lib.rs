@@ -270,8 +270,8 @@ pub fn insert(ctx: &Context, ts: DateTime<Utc>, data: SparseData) -> Result<()> 
             "ZADD",
             &vec![
                 "TS",
-                id.to_string().as_str(),
                 ts.timestamp().to_string().as_str(),
+                id.to_string().as_str(),
             ],
         )
         .map_err(|err| return anyhow!(err))?;
