@@ -29,7 +29,7 @@ $ cargo build
 2. Load ZX as a redis module
 
 ```
-redis-server --loadmodule ./target/debug/libxz.dylib
+redis-server --loadmodule ./target/debug/libzx.dylib
 ```
 
 ### Running tests
@@ -43,7 +43,7 @@ $ redis-server --loadmodule <LIBXZ_PATH_RELATIVE_TO_DIR> --dir <FIXTURE_DIR> --d
 For example, assuming you're in the project root:
 
 ```
-$ redis-server --loadmodule ../target/debug/libzx.so --dir ./fixtures/ --dbfilename TS.rdb
+$ redis-server --loadmodule ../target/debug/libzx.dylib --dir ./fixtures/ --dbfilename TS.rdb
 ```
 
 In another console:
